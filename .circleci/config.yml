@@ -19,4 +19,6 @@ jobs:
     steps:
       - checkout
 
+      - run: composer install -n --prefer-dist
+
       - run: echo "Hello world!"
