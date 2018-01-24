@@ -24,4 +24,6 @@ jobs:
           paths:
             - vendor
 
-      - run: echo "Hello world!"
+      - run:
+          name: Behat Tests
+          command: behat
