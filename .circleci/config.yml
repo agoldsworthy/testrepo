@@ -13,15 +13,15 @@ jobs:
       - run: echo 'export PATH=$(pwd)/vendor/bin:$PATH' >> $BASH_ENV
 
       - restore_cache:
-        keys:
-          - dependencies-{{ checksum "composer.json" }}
-          - dependencies
+          keys:
+            - dependencies-{{ checksum "composer.json" }}
+            - dependencies
 
       - run: composer install -n --prefer-dist
 
       - save_cache:
-        key: dependencies-{{ checksum "composer.json" }}
-        paths:
-          - vendor
+          key: dependencies-{{ checksum "composer.json" }}
+          paths:
+            - vendor
 
       - run: echo "Hello world!"
