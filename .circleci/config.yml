@@ -6,9 +6,8 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/php:7.1.5-browsers
+      - image: circleci/php:7.1-node-browsers
     steps:
-      - run: echo 'export PATH=$(pwd)/vendor/bin:$PATH' >> $BASH_ENV
       - checkout
 
       - run: composer install -n --prefer-dist
