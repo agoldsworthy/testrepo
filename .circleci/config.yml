@@ -27,3 +27,11 @@ jobs:
       - run:
           name: Behat Tests
           command: behat
+
+      - run:
+          name: Disable host key checking
+          command: bash ./.circleci/disable_host_key_checking.sh
+
+      - run:
+          name: list files
+          command: ssh circleci@173.255.247.80 ls -al
