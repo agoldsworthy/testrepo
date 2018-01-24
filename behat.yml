@@ -5,10 +5,6 @@ default:
         - FeatureContext
   extensions:
     Behat\MinkExtension:
+      base_url: https://events.drupal.org/nashville2018
       goutte: ~
       selenium2: ~
-
-autoupdate:
-  extensions:
-    Behat\MinkExtension:
-      base_url: https://events.drupal.org/nashville2018
