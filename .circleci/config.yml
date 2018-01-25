@@ -30,8 +30,8 @@ jobs:
 
       - run:
           name: Disable host key checking
-          command: bash ./.circleci/disable_host_key_checking.sh
+          command: bash .circleci/disable_host_key_checking.sh
 
       - run:
-          name: list files
+          name: Deploy awesome site
           command: ssh circleci@173.255.247.80 ls -al
